@@ -17,12 +17,49 @@ struct ActiveDictIds
   }
 };
 
+
+enum class PronounceState
+{
+  AVAILABLE,
+  OCCUPIED
+};
+
+class AudioState: public QObject
+{
+  Q_OBJECT
+  PronounceState state=PronounceState::AVAILABLE;
+  QMutex mutex;
+
+
+public:
+
+  void reset()
+  {
+    QMutexLocker _( &mutex );
+    state = PronounceState::AVAILABLE;
+  }
+
+  void sendAudio( QString audioLink )
+  {
+    QMutexLocker _( &mutex );
+    if ( state == PronounceState::OCCUPIED )
+      return;
+    state = PronounceState::OCCUPIED;
+    emit emitAudio( audioLink );
+  }
+
+signals:
+  void emitAudio( QString audioLink );
+};
+
 class GlobalBroadcaster : public QObject
 {
   Q_OBJECT
 private:
   Config::Preferences * preference;
   QSet<QString> whitelist;
+
+  AudioState audioState;
 
 public:
   void setPreference( Config::Preferences * _pre );
