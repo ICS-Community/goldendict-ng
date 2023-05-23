@@ -2,8 +2,9 @@
 
 [![Crowdin](https://badges.crowdin.net/goldendict-ng/localized.svg)](https://crowdin.com/project/goldendict-ng)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=xiaoyifang_goldendict&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=xiaoyifang_goldendict)
-[![Windows](https://github.com/xiaoyifang/goldendict/actions/workflows/windows.yml/badge.svg)](https://github.com/xiaoyifang/goldendict/actions/workflows/windows.yml) [![Ubuntu](https://github.com/xiaoyifang/goldendict/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/xiaoyifang/goldendict/actions/workflows/ubuntu.yml)
-[![macos](https://github.com/xiaoyifang/goldendict/actions/workflows/macos.yml/badge.svg)](https://github.com/xiaoyifang/goldendict/actions/workflows/macos.yml)
+[![Windows-6.x-xapian](https://github.com/xiaoyifang/goldendict-ng/actions/workflows/windows-6.x-xapian.yml/badge.svg)](https://github.com/xiaoyifang/goldendict-ng/actions/workflows/windows-6.x-xapian.yml)
+[![Ubuntu-6.2-xapian](https://github.com/xiaoyifang/goldendict-ng/actions/workflows/ubuntu-6.2-xapian.yml/badge.svg)](https://github.com/xiaoyifang/goldendict-ng/actions/workflows/ubuntu-6.2-xapian.yml)
+[![macos-homebrew-xapian](https://github.com/xiaoyifang/goldendict-ng/actions/workflows/macos-homebrew-xapian.yml/badge.svg)](https://github.com/xiaoyifang/goldendict-ng/actions/workflows/macos-homebrew-xapian.yml)
 
 The Next Generation GoldenDict. A feature-rich open-source dictionary lookup program,
 supporting [multiple dictionary formats](https://xiaoyifang.github.io/goldendict-ng/dictformats/) and online
@@ -18,7 +19,7 @@ dictionaries.
 - webengine with latest html/css feature support
 - support >4GB dictionary
 - support highdpi screen resolution
-- built with xapian(optional) as fulltext engine
+- built with xapian as fulltext engine
 - support Qt5.15.2 and higher ,include latest Qt6
 - performance optimization(eg. >10000000 headwords support) 
 - anki integration
@@ -241,4 +242,8 @@ This project is licensed under the <b>GNU GPLv3+</b> license, a copy of which ca
 ## History
 
 The original project was developed at <http://goldendict.org/> and <https://github.com/goldendict/goldendict>.
+
+## Thanks the help of JetBrains
+
+[![JetBrains Black Box Logo logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png)](https://jb.gg/OpenSourceSupport)
 
